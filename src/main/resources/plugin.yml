@@ -1,0 +1,22 @@
+name: special_weapon
+main: com.piggest.minecraft.bukkit.special_weapon.Special_weapon
+api-version: 1.13
+version: 0.0.1
+author: Pentyum
+commands:
+  special_weapon:
+    description: Make a dropper shop.
+    usage: /<command> make ,to make a dropper shop which sell the item in you main hand.
+    permission: special_weapon.make
+    permission-message: You don't have permission
+permissions:
+  special_weapon.*:
+    description: Gives access to all dropper shop commands.
+    default: op
+  special_weapon.make:
+    description: Gives access to make dropper shop.
+    default: true
+  special_weapon.changeprice:
+    description: Change price dropper shop.
+    default: op
+softdepend: [Vault]
