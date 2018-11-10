@@ -36,10 +36,20 @@ public class Immolate_runner extends BukkitRunnable {
 		for (Entity entity : nearby_entities) {
 			if (entity instanceof LivingEntity) {
 				LivingEntity living = (LivingEntity) entity;
-				//user.sendMessage("检测到" + living.getName() + "伤害" + damage);
-				living.damage(damage, user);
+				for (Living_type type : Living_type.values()) {
+					if (entity.getClass().getSuperclass().getSimpleName().equalsIgnoreCase(type.name())) {
+						if (user.hasPermission("special_weapon.immolate." + type.name())) {
+							living.damage(damage, user);
+						}
+						return;
+					}
+				}
+				// user.sendMessage("检测到" + living.getName() + "伤害" + damage);
 			}
 		}
 	}
 
+	enum Living_type {
+		npc, animals, player, monster;
+	}
 }

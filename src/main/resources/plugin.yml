@@ -19,4 +19,16 @@ permissions:
   special_weapon.changeprice:
     description: Change price dropper shop.
     default: op
+  special_weapon.immolate.animals:
+    description: Immolate can damage animal.
+    default: true
+  special_weapon.immolate.monster:
+    description: Immolate can damage monster.
+    default: true
+  special_weapon.immolate.npc:
+    description: Immolate can damage npc.
+    default: true
+  special_weapon.immolate.player:
+    description: Immolate can damage player.
+    default: true
 softdepend: [Vault]

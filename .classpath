@@ -35,5 +35,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="E:/yaoyao/workspace/EnchantmentAPI.jar"/>
+	<classpathentry kind="lib" path="E:/yaoyao/workspace/MCCore.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

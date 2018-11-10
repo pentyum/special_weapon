@@ -6,7 +6,7 @@ import com.sucy.enchant.api.ItemSet;
 public class Immolate extends CustomEnchantment {
 
 	public Immolate() {
-		super("献祭", "戴上后每秒对周围实体造成 1*附魔等级 火焰伤害");
+		super("献祭", "戴上后每秒对周围实体造成 1*附魔等级 伤害");
 		this.setMaxLevel(5);
 		this.addNaturalItems(ItemSet.CHESTPLATES.getItems());
 		this.setTableEnabled(false);
