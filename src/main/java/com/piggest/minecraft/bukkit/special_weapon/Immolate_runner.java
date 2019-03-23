@@ -38,9 +38,7 @@ public class Immolate_runner extends BukkitRunnable {
 				LivingEntity living = (LivingEntity) entity;
 				for (Living_type type : Living_type.values()) {
 					if (entity.getClass().getSuperclass().getSimpleName().equalsIgnoreCase(type.name())) {
-						if (user.hasPermission("special_weapon.immolate." + type.name())) {
-							living.damage(damage, user);
-						}
+						living.damage(damage, user);
 						return;
 					}
 				}
