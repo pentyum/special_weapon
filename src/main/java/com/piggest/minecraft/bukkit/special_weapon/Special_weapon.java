@@ -1,6 +1,7 @@
 package com.piggest.minecraft.bukkit.special_weapon;
 
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -43,7 +44,10 @@ public class Special_weapon extends JavaPlugin implements EnchantPlugin {
 			getLogger().severe("初始化Vault失败,请检测是否已经安装Vault插件和经济插件");
 			return;
 		}
-
+		
+		PluginManager pm = getServer().getPluginManager();
+		pm.registerEvents(new Get_exp_listener(), this);
+		
 		this.immolate_manager = new Immolate_manager(this);
 		this.immolate_manager.runTaskTimerAsynchronously(this, 5, 2);
 		// PluginManager pm = getServer().getPluginManager();
